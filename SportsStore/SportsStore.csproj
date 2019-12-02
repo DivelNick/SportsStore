@@ -11,9 +11,12 @@
 
     <ItemGroup>
         <PackageReference Include="bootstrap" Version="4.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.App" />
-        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet">
-          <Version>2.0.3</Version>
+        <PackageReference Include="BuildBundlerMinifier" Version="3.2.435" />
+        <PackageReference Include="Microsoft.AspNetCore.App">
+          <PrivateAssets Condition="'%(PackageReference.Version)' == ''">all</PrivateAssets>
+          <Publish Condition="'%(PackageReference.Version)' == ''">true</Publish>
+        </PackageReference>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools.DotNet" Version="2.0.3">
         </PackageReference>
     </ItemGroup>
 

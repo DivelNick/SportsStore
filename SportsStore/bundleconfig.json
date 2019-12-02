@@ -1,0 +1,50 @@
+[
+  {
+    "outputFileName": "wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+    "inputFiles": [
+      "node_modules/bootstrap/dist/css/bootstrap.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+    "inputFiles": [
+      "node_modules/bootstrap/dist/css/bootstrap.min.css"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+    "inputFiles": [
+      "node_modules/bootstrap/dist/js/bootstrap.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+    "inputFiles": [
+      "node_modules/bootstrap/dist/js/bootstrap.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/bootstrap/dist/js/jquery.js",
+    "inputFiles": [
+      "node_modules/jquery/dist/jquery.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/bootstrap/dist/js/jquery.min.js",
+    "inputFiles": [
+      "node_modules/jquery/dist/jquery.min.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/bootstrap/dist/js/jquery.validate.js",
+    "inputFiles": [
+      "node_modules/jquery-validation/dist/jquery.validate.js"
+    ]
+  },
+  {
+    "outputFileName": "wwwroot/lib/bootstrap/dist/js/jquery.validate.min.js",
+    "inputFiles": [
+      "node_modules/jquery-validation/dist/jquery.validate.min.js"
+    ]
+  }
+]

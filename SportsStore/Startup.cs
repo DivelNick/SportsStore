@@ -25,9 +25,16 @@ namespace SportsStore
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            string connectionString = Configuration["Data:SportStoreProducts:ConnectionString"];
+            string osVersion = Environment.OSVersion.ToString();
+
+            if (osVersion.Equals("Unix 17.5.0.0"))
+                connectionString = Configuration["Data:SportStoreProducts:ConnectionStringMac"];
+
+
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration["Data:SportStoreProducts:ConnectionString"]
+                    connectionString
                 ));
             services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddMvc();
@@ -48,7 +55,7 @@ namespace SportsStore
                 routes.MapRoute(
                     name: "pagination",
                     template: "Products/Page{productPage}",
-                    defaults: new { Controller = "Product", action = "List"});
+                    defaults: new {Controller = "Product", action = "List"});
                 routes.MapRoute(
                     name: "default",
                     template: "{controller=Product}/{action=List}/{id?}"
