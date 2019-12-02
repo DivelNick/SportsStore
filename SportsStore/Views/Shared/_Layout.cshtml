@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width"/>
+    
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css"/>
     </environment>
@@ -9,6 +10,7 @@
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"/>
     </environment>
+    
     <title>Sports Store</title>
 </head>
 <body>
@@ -17,7 +19,7 @@
 </div>
 <div class="row m-1 p-1">
     <div id="categories" class="col-3">
-        Put something userful here later
+        @await Component.InvokeAsync("NavigationMenu")
     </div>
 
     <div class="col-9">
